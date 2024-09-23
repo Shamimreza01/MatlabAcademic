@@ -1,0 +1,14 @@
+x=input('Enter the value of x : ');
+y=input('Enter the value of y :');
+IX=input('Enter the point for interpolation ');
+n=length(x);
+t=zeros(1:n);
+for i=1:n
+    tempP=1;
+    for j=1:n
+        if i~=j
+            tempP=conv(v,poly(x(j)))/(x(i)-x(j));
+        end
+    end
+    t(1,i)=tempP.*y(i)
+end
